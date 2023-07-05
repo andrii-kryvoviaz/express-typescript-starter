@@ -12,7 +12,7 @@ This starter project provides a solid foundation for building web applications u
 - Basic User Management: Includes functionality for user registration, login, and logout.
 - Docker: Offers containerization support for running the project.
 
-Table of Contents:
+## Table of Contents:
 
 - [Getting Started](#getting-started)
   - [Development](#development)
