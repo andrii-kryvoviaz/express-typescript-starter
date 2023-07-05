@@ -23,6 +23,7 @@ Table of Contents:
   - [REST API](#rest-api)
   - [Dependency Injection](#dependency-injection)
   - [Using MongoDB with Mongoose](#using-mongodb-with-mongoose)
+  - [Error Handling](#error-handling)
   - [Websocket](#websocket)
 
 ## Getting Started
@@ -173,6 +174,22 @@ export class UserService {
     const user = await userModel.findOne({ name: 'John' });
   }
 }
+```
+
+### Error Handling
+
+Error middleware automatically catches errors and sends a response with the appropriate status code and message.
+To throw an error, you can use the `throw` keyword:
+
+```typescript
+throw new Error('Something went wrong');
+```
+
+To send a custom status code, you can set the status code on the response object and then throw an error:
+
+```typescript
+res.status(400);
+throw new Error('Something went wrong');
 ```
 
 ### Websocket
