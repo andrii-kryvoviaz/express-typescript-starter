@@ -1,4 +1,5 @@
-#Express + TypeScript Starter
+# Express + TypeScript Starter
+
 This starter project provides a solid foundation for building web applications using Express and TypeScript. It includes several features and technologies to help you get up and running quickly.
 
 ## Features
