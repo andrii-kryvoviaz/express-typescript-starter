@@ -28,16 +28,16 @@ export const LoginValidator = async (
     errors.password = 'Password is required';
   }
 
-  const user = await UserModel.findOne({ email });
-
-  if (!user || !(await user.matchPassword(password))) {
-    return res.status(401).json({ error: 'Invalid credentials' });
-  }
-
   const { isValid } = ValidatorResponseFactory.create(errors);
 
   if (!isValid) {
     return res.status(400).json(errors);
+  }
+
+  const user = await UserModel.findOne({ email });
+
+  if (!user || !(await user.matchPassword(password))) {
+    return res.status(401).json({ error: 'Invalid credentials' });
   }
 
   req.user = user;
